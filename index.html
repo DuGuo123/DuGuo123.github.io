@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我们的爱情纪念册</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 浪漫背景动画容器 -->
+    <div class="animation-container" id="animationContainer"></div>
+
+    <!-- 背景音乐 -->
+    <audio id="bgMusic" loop>
+        <!-- 🎵 在此处替换您的音乐链接 -->
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- 首页 -->
+    <div class="page active" id="page0">
+        <div class="cover-container">
+            <!-- 📷 在此处替换您的封面照片 -->
+            <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200&h=800&fit=crop" alt="我们的合照" class="cover-image">
+            <div class="cover-overlay">
+                <h1 class="cover-title">我们的故事</h1>
+                <button class="start-button" onclick="startJourney()">点击开启回忆</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 内页1 -->
+    <div class="page" id="page1">
+        <div class="content-container">
+            <!-- 📷 替换照片链接 -->
+            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&h=600&fit=crop" alt="回忆1" class="memory-image">
+            <div class="text-content">
+                <!-- ✍️ 替换文字内容 -->
+                <p class="love-text">遇见你的那一刻，我的世界开始有了颜色。</p>
+            </div>
+            <button class="next-button" onclick="nextPage(1)">下一页 ❤</button>
+        </div>
+    </div>
+
+    <!-- 内页2 -->
+    <div class="page" id="page2">
+        <div class="content-container">
+            <div class="text-content text-top">
+                <p class="love-text">你的笑容是我每天最期待的风景。</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&h=600&fit=crop" alt="回忆2" class="memory-image">
+            <button class="next-button" onclick="nextPage(2)">下一页 ❤</button>
+        </div>
+    </div>
+
+    <!-- 内页3 -->
+    <div class="page" id="page3">
+        <div class="content-container horizontal">
+            <div class="text-content text-left">
+                <p class="love-text">牵着你的手，感觉拥有了整个世界。</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=800&h=600&fit=crop" alt="回忆3" class="memory-image">
+            <button class="next-button" onclick="nextPage(3)">下一页 ❤</button>
+        </div>
+    </div>
+
+    <!-- 内页4 -->
+    <div class="page" id="page4">
+        <div class="content-container">
+            <img src="https://images.unsplash.com/photo-1524531076746-0f3a44e0b8ae?w=800&h=600&fit=crop" alt="回忆4" class="memory-image">
+            <div class="text-content">
+                <p class="love-text">每一次相拥，都是最温暖的归宿。</p>
+            </div>
+            <button class="next-button" onclick="nextPage(4)">下一页 ❤</button>
+        </div>
+    </div>
+
+    <!-- 内页5 -->
+    <div class="page" id="page5">
+        <div class="content-container">
+            <div class="text-content text-top">
+                <p class="love-text">你说的每一句话，我都想听一百遍。</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=800&h=600&fit=crop" alt="回忆5" class="memory-image">
+            <button class="next-button" onclick="nextPage(5)">下一页 ❤</button>
+        </div>
+    </div>
+
+    <!-- 内页6 -->
+    <div class="page" id="page6">
+        <div class="content-container horizontal">
+            <div class="text-content text-left">
+                <p class="love-text">和你在一起的时光，总是过得特别快。</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1516589091380-5d8e87df6999?w=800&h=600&fit=crop" alt="回忆6" class="memory-image">
+            <button class="next-button" onclick="nextPage(6)">下一页 ❤</button>
+        </div>
+    </div>
+
+    <!-- 内页7 -->
+    <div class="page" id="page7">
+        <div class="content-container">
+            <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=800&h=600&fit=crop" alt="回忆7" class="memory-image">
+            <div class="text-content">
+                <p class="love-text">想和你走过春夏秋冬，看遍人间风景。</p>
+            </div>
+            <button class="next-button" onclick="nextPage(7)">下一页 ❤</button>
+        </div>
+    </div>
+
+    <!-- 内页8 -->
+    <div class="page" id="page8">
+        <div class="content-container">
+            <div class="text-content text-top">
+                <p class="love-text">你是我心中永远的小确幸。</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&h=600&fit=crop" alt="回忆8" class="memory-image">
+            <button class="next-button" onclick="nextPage(8)">下一页 ❤</button>
+        </div>
+    </div>
+
+    <!-- 内页9 -->
+    <div class="page" id="page9">
+        <div class="content-container horizontal">
+            <div class="text-content text-left">
+                <p class="love-text">余生很长，我想和你一起度过。</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=800&h=600&fit=crop" alt="回忆9" class="memory-image">
+            <button class="next-button" onclick="nextPage(9)">下一页 ❤</button>
+        </div>
+    </div>
+
+    <!-- 内页10 -->
+    <div class="page" id="page10">
+        <div class="content-container">
+            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&h=600&fit=crop" alt="回忆10" class="memory-image">
+            <div class="text-content">
+                <p class="love-text">感谢命运让我遇见了你。</p>
+            </div>
+            <button class="next-button" onclick="nextPage(10)">下一页 ❤</button>
+        </div>
+    </div>
+
+    <!-- 内页11 -->
+    <div class="page" id="page11">
+        <div class="content-container">
+            <div class="text-content text-top">
+                <p class="love-text">每一个明天，都想和你一起醒来。</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1524531076746-0f3a44e0b8ae?w=800&h=600&fit=crop" alt="回忆11" class="memory-image">
+            <button class="next-button" onclick="nextPage(11)">下一页 ❤</button>
+        </div>
+    </div>
+
+    <!-- 内页12 -->
+    <div class="page" id="page12">
+        <div class="content-container">
+            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=800&h=600&fit=crop" alt="回忆12" class="memory-image">
+            <div class="text-content">
+                <p class="love-text">爱你，是我做过最对的决定。❤️</p>
+            </div>
+            <button class="home-button" onclick="goHome()">回到首页 🏠</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
